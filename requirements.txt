@@ -1,0 +1,4 @@
+numpy>=1.26
+fastapi>=0.115
+uvicorn[standard]>=0.34
+regex>=2024.11.6

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyllama-local"
+version = "0.6.0"
+description = "Pure-Python local GGUF LLM runtime inspired by llama.cpp architecture"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.34",
+  "regex>=2024.11.6",
+]
+
+[project.scripts]
+pyllama = "pyllama.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["pyllama*"]
